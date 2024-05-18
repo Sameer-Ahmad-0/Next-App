@@ -1,4 +1,4 @@
-"use client"; // This directive tells Next.js to treat this component as a Client Component
+"use client"; 
 
 import { useState, useRef, useEffect } from "react";
 
