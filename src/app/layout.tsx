@@ -5,6 +5,9 @@ import Navbar from "@/component/Navbar";
 import Background from "@/component/Background";
 import { SignupFormDemo } from "@/component/Signup";
 import { TypewriterEffectSmoothDemo } from "@/component/Typewriter";
+import { LampDemo } from "@/component/Lamp";
+import Home from "@/component/Musicapp";
+import Musicapp from "@/component/Musicapp";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +27,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar/>
         <TypewriterEffectSmoothDemo/>
-        <SignupFormDemo/>
+        <Musicapp/>
+        <LampDemo/>
+        {/* <SignupFormDemo/> */}
         <Background/>
         
         {children}</body>
