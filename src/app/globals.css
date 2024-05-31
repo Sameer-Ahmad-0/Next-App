@@ -54,3 +54,23 @@ button{
 button:hover{
   background-color: #005bb5;
 }
+/* styles.css */
+.custom-audio::-webkit-media-controls-panel {
+  background: linear-gradient(to bottom, #6a0dad, #9400d3); /* Match the gradient */
+}
+
+.custom-audio::-webkit-media-controls-play-button,
+.custom-audio::-webkit-media-controls-pause-button,
+.custom-audio::-webkit-media-controls-mute-button,
+.custom-audio::-webkit-media-controls-volume-slider {
+  filter: hue-rotate(180deg) brightness(0.8); /* Adjust color to match the theme */
+}
+
+.custom-audio::-webkit-media-controls-timeline {
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+}
+
+.custom-audio::-webkit-media-controls-current-time-display,
+.custom-audio::-webkit-media-controls-time-remaining-display {
+  color: white;
+}

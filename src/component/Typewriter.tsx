@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { SignupFormDemo } from "./Signup";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 export function TypewriterEffectSmoothDemo() {
   const words = [
@@ -30,7 +32,7 @@ export function TypewriterEffectSmoothDemo() {
           Join now
         </button>
         <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-          Signup
+          <Link href ="../component/Signup.tsx"> Sign UP</Link>
         </button>
       </div>
     </div>

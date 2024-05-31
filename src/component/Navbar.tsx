@@ -23,20 +23,26 @@ const Navbar = ({ className }: { className?: string }) => {
     const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 ", className)}
     >
       <Menu setActive={setActive}>
         
         <MenuItem setActive={setActive} active={active} item="Services">
         <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
+            <HoveredLink href="/Hip Pop Music">Hip Pop Music</HoveredLink>
+            <HoveredLink href="/Classical Music">Classical Music</HoveredLink>
+            <HoveredLink href="/Sufi Music">Sufi Music</HoveredLink>
+            <HoveredLink href="/Slowed Reverb Music">Slowed Reverb Music</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Courses">
-        <HoveredLink href="/courses">All courses</HoveredLink>
+        <div className="flex flex-col space-y-4 text-sm">
+        <HoveredLink href="/Music Theory">Music Theory</HoveredLink>
+        <HoveredLink href="/Music History">Music History</HoveredLink>
+        <HoveredLink href="/Ear Training">Ear Training</HoveredLink>
+        <HoveredLink href="/Composition">Composition</HoveredLink>
+        <HoveredLink href="/Performance">Performance</HoveredLink>
+        </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Pricing">
           <HoveredLink href="/pricing">100$</HoveredLink>
