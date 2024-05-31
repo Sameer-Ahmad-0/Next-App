@@ -150,7 +150,7 @@ const MusicApp = () => {
               <img
                 src={songs[currentSongIndex].images}
                 alt={songs[currentSongIndex].title}
-                className="w-full h-auto max-h-48 object-contain rounded-lg"
+                className="w-full h-auto max-h-48 object-contain rounded-2xl"
               />
               <audio ref={audioRef} src={songs[currentSongIndex].src} controls className=" custom-audio w-full mt-4" />
               <div className="flex justify-center mt-4">
