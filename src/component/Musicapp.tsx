@@ -152,20 +152,20 @@ const MusicApp = () => {
               <img
                 src={songs[currentSongIndex].images}
                 alt={songs[currentSongIndex].title}
-                className="w-full h-auto max-h-48 object-contain rounded-2xl"
+                className=" h-auto max-h-48 object-contain rounded-2xl shadow-l"
               />
               <audio ref={audioRef} src={songs[currentSongIndex].src} controls className=" custom-audio w-full mt-4" />
               <div className="flex justify-center mt-4">
-                <button onClick={prevSong} className="mx-2 p-2 bg-black text-white rounded"><FaStepBackward /></button>
-                <button onClick={nextSong} className="mx-2 p-2 bg-black text-white rounded"> <FaStepForward /></button>
-                <button onClick={shuffleSongs} className="mx-2 p-2 bg-black text-white rounded"> <FaRandom /></button>
-                <button onClick={replaySong} className="mx-2 p-2 bg-black text-white rounded"><FaRedo /></button>
-                <button onClick={stopSong} className="mx-2 p-2 bg-black text-white rounded"><FaPause /></button>
+                <button onClick={prevSong} className="mx-2 p-2 bg-pink-500 text-black rounded"><FaStepBackward /></button>
+                <button onClick={nextSong} className="mx-2 p-2 bg-pink-500 text-black  rounded"> <FaStepForward /></button>
+                <button onClick={shuffleSongs} className="mx-2 p-2 bg-pink-500 text-black  rounded"> <FaRandom /></button>
+                <button onClick={replaySong} className="mx-2 p-2 bg-pink-500 text-black rounded"><FaRedo /></button>
+                <button onClick={stopSong} className="mx-2 p-2 bg-pink-500 text-black  rounded"><FaPause /></button>
               </div>
             </div>
             <button
               onClick={() => setIsModalVisible(false)}
-              className="absolute top-2 right-2 p-2 bg-red-500 text-white rounded-full"
+              className="absolute top-2 right-2 p-2 bg-pink-500 text-black rounded-full"
             >
                <FaTimes />
             </button>
