@@ -92,3 +92,45 @@ button:hover{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroller {
+  --animation-duration: 20s;
+  --animation-direction: forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroller ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  animation: scroll var(--animation-duration) linear infinite;
+  animation-play-state: running;
+}
+
+.scroller ul.animate-scroll {
+  animation-play-state: running;
+}
+
+.scroller ul.hover\:paused:hover {
+  animation-play-state: paused;
+}
+
+.hover\:pop {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover\:pop:hover {
+  transform: translateY(-15px) scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10; 
+}

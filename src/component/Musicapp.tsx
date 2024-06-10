@@ -205,9 +205,9 @@ const MusicApp = () => {
   };
   //
   return (
-    <div className="p-4 bg-gradient-to-b from-orange-500 to-pink-600 min-h-screen text-white">
+    <div className="p-4 bg-gradient-to-b from-black to-gray-900 min-h-screen text-white">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">Good {getGreeting()} , Sameer!</h1>
+        <h1 className="text-2xl font-bold text-white">Good {getGreeting()} , Sameer!</h1>
         <div className="flex space-x-4 items-center">
           <input
             type="text"
@@ -221,20 +221,22 @@ const MusicApp = () => {
       </div>
       <h2 className="text-xl font-semibold mb-2">PLaylist</h2>
       <div className="flex flex-wrap justify-center mb-4">
-        {filteredSongs.map((song, index) => (
-          <div key={index} className="flex flex-col items-center mr-4 mb-4">
-            {song.images && (
-              <img
-                src={song.images}
-                alt={song.title}
-                className="w-28 h-28 object-cover rounded-xl cursor-pointer"
-                onClick={() => playSong(index)}
-              />
-            )}
-            <span className="mt-2">{song.title}</span>
-          </div>
-        ))}
-      </div>
+  {filteredSongs.map((song, index) => (
+    <div key={index} className="flex flex-col items-center mr-4 mb-4">
+      {song.images && (
+        <img
+          src={song.images}
+          alt={song.title}
+          className="w-28 h-28 object-cover rounded-xl cursor-pointer hover:pop"
+          onClick={() => playSong(index)}
+        />
+      )}
+      <span className="mt-2">{song.title}</span>
+    </div>
+  ))}
+</div>
+
+
       {isModalVisible && currentSongIndex !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 backdrop-blur-md">
           <div className="bg-gradient-to-b from-orange-500 to-pink-600 text-white p-4 rounded-lg w-3/4 max-w-lg relative">
@@ -299,3 +301,4 @@ const MusicApp = () => {
 };
 
 export default MusicApp;
+// its a part of life my bro everyone is not a succefull in chutiya life ha but its ok i know abou that but

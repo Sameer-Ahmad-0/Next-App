@@ -7,7 +7,10 @@ import { TypewriterEffectSmoothDemo } from "@/component/Typewriter";
 import { LampDemo } from "@/component/Lamp";
 import Musicapp from "@/component/Musicapp";
 import { SpotlightPreview } from "@/component/SpotlightPreview";
-import { CardHoverEffectDemo } from "@/component/CardHover";
+// import { CardHoverEffectDemo } from "@/component/CardHover";
+import { InfiniteMovingCardsDemo } from "@/component/Infinity";
+import { CardHoverEffectDemo } from "@/component/Pages/Services";
+import { ThreeDCardDemo } from "@/component/Courses";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,7 +34,9 @@ export default function RootLayout({
         <CardHoverEffectDemo/>
         {/* <TypewriterEffectSmoothDemo/> */}
         <Musicapp/>
-        
+        <InfiniteMovingCardsDemo/>
+        <ThreeDCardDemo/>
+    
         <Background/>
         
         {children}</body>
